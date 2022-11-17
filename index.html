@@ -26,30 +26,40 @@
         <h1>CODING QUIZ CHALLENGE</h1>
         <p>Answer as many possible questions within the time limit, 
         incorrect answers will penalize your score time by ten seconds</p>
-        <button id="start-quiz" class="start-quiz">START QUIZ</button>
+        <button id="start-quiz" class="start-quiz">START</button>
     </div>
 
     <!-- QUIZ QUESTIONS -->
-
     <!-- container thats the card  -->
-    <div class ="card-container">
+    <div class ="card-container" class="hide">
+            <h1 id="question-title">Questions</h1>
+        <div id="answer-options" class="answer-options">
 
-    <!-- where the questions go  THINK IS THE SAME AS THE TOP CONTAINER GOTTA FIGURE OUT HOW TO HIDE IT -->
-    <div id="question-container" class="hide">
-
-        <!-- the quiz questions ex: what is an element-->
-        <div id="question">Questions</div>
-
-        <!-- buttons with answers -->
-
-        <div id="answer-button" class="answer-button">
+            <button class="button" id="answer1">answer 1</button>
             <button class="button">answer 1</button>
             <button class="button">answer 1</button>
-            <button class="button">answer 1</button>
-            <button class="button">answer 1</button>
-          
+            <button class="button">answer 1</button> 
+        </div>
+
+            <!-- YOU'RE DONT & HIGH SCORE PAGE -->
+        <div class ="card-container" class="hide">
+            <h1>YOU'RE DONE!</h1>
+                <h2>Your final score is <span id="final-score">0</span></h2>
+                <label for="initials-area">Enter initials:</label>
+                <input type="text" name="initials-area" maxlength="2" id="initials">
+                <button id="submit-button" type="submit">Submit</button>
+            </div>
+
+            <div class ="card-container" class="hide">
+            <div id="highscore" class="highscore">
+                <h1>HIGH SCORES</h1>
+                <button id="playagain">Play Again</button>
+                <button id="clearHS" value="reset">Clear Highscores</button>
+            </div>        
 
 
+ <!-- <button class="button correct">answer 1</button>
+            <button class="button wrong">answer 1</button> -->
 
 <!-- All Done!
 Your Final score is x.
@@ -60,7 +70,6 @@ High Scores
 [TEXT BOX: 1. AB 22 POINTS] -->
 <!-- <button id="go-back" class="go-back">GO BACK</button> -->
 <!-- <button id="clear-score" class="clear-score">Clear Score</button> -->
-
 
     <script src="./Assets/JavaScript/script.js"></script>
 </body>

@@ -1,5 +1,4 @@
 
-
 //QUESTIONS ARRAY 
 
 var quizQuestions = [
@@ -29,3 +28,15 @@ var quizQuestions = [
     answer: 'console.log()'
     },
 ]
+
+// DOME ELEMENTS
+
+var highScoreEl = document.querySelector("NEED TO MAKE ONE")
+
+var timerEl = document.querySelector("#timer");
+
+var startQuizEl = document.querySelector("#start-quiz");
+
+//where the questions are going to be
+var questionContainerEl =document.querySelector("#question-container");
+

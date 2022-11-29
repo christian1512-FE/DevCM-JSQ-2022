@@ -17,12 +17,12 @@
     <header>
         <div class="top-container">
             <a href="./highscoreshtml.html">View High Score</a>
-            <div class= "timer" id="timer">Time: 0
+            <div class= "timer" id="timer"> Time: 0
         </div>
     </header>
 
     <!-- START BUTTON MAIN PAGE WITH RULES OF GAME -->
-    <div class ="card-container" class="show">
+    <div id ="card-container" class="show">
         <h1>CODING QUIZ CHALLENGE</h1>
         <p>Answer as many possible questions within the time limit, 
         incorrect answers will penalize your score time by ten seconds</p>
@@ -31,18 +31,19 @@
 
     <!-- QUIZ QUESTIONS -->
     <!-- container thats the card  -->
-    <div class ="card-container" class="hide">
-            <h1 id="question-title">Questions</h1>
-        <div id="answer-options" class="answer-options">
-
-            <button class="button" id="answer1">answer 1</button>
-            <button class="button">answer 1</button>
-            <button class="button">answer 1</button>
-            <button class="button">answer 1</button> 
-        </div>
+    <div id ="quiz-container" class="hide">
+            <h2 id="question-title">Questions Go Here NOTE</h2>
+          <div id = "answer-options" class="answer-options"></div>
+          
+            <!-- <button class="button" id="answer1"></button>
+            <button class="button" id="answer2"></button>
+            <button class="button" id="answer3"></button>
+            <button class="button" id="answer4"></button>  -->
+            
+    </div>
 
             <!-- YOU'RE DONT & HIGH SCORE PAGE -->
-        <div class ="card-container" class="hide">
+        <div id ="score-container" class="hide">
             <h1>YOU'RE DONE!</h1>
                 <h2>Your final score is <span id="final-score">0</span></h2>
                 <label for="initials-area">Enter initials:</label>
@@ -50,7 +51,7 @@
                 <button id="submit-button" type="submit">Submit</button>
             </div>
 
-            <div class ="card-container" class="hide">
+            <div id ="highscore-container" class="hide">
             <div id="highscore" class="highscore">
                 <h1>HIGH SCORES</h1>
                 <button id="playagain">Play Again</button>

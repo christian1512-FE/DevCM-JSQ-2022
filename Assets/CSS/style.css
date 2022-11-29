@@ -23,8 +23,9 @@ body {
 }
 
 .show {
-    display: block;
+    display: flex;
 }
+
 
 header {
  padding: 50px; 
@@ -45,8 +46,8 @@ a:link  {
 }
 
 
-.card-container {
- display: flex;
+#card-container, #quiz-container, #score-container, #highscore-container{
+ /* display: flex; */
  flex-direction: column;
  justify-content: center;
  align-items: center; 
@@ -57,10 +58,12 @@ a:link  {
  border-radius: 67px;
  background-color: rgb(255, 251, 251);
  box-shadow: 0 0 10px 2px;
+ /* border: 10px solid purple ; */
  /* background-image: url(./Images/PhotoRoom_20221113_155357.jpg); */
- background-repeat: no-repeat;
+ /* background-repeat: no-repeat; */
 
 } 
+
 
 
 /* QUIZ TITLE ON CARD */
@@ -123,3 +126,5 @@ button.correct {
 button.wrong {
     background-color: rgb(240, 0, 0);
 }
+
+

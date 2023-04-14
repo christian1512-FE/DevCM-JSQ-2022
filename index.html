@@ -8,75 +8,46 @@
     <!-- ADDED CSS FILE -->
     <link rel="stylesheet" href="./Assets/CSS/style.css" rel="stylesheet">
     <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bebas+Neue&family=Prompt:wght@100&display=swap"
-    rel="stylesheet">
-    <title>JS QUIZZZZZZ</title>
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bebas+Neue&family=Prompt:wght@100&display=swap"
+        rel="stylesheet">
+    <title>CM JavaScript Quiz</title>
 </head>
+
 <body>
     <!-- HEADER WITH TIMER & VIEW HIGH SCORE -->
     <header>
         <div class="top-container">
-            <a href="./highscoreshtml.html">View High Score</a>
-            <div class= "timer" id="timer"> Time: 0
-        </div>
+            <a href="highscore.html">View High Score</a>
+            <div class="timer" id="timer"> Time: 0
+            </div>
     </header>
 
     <!-- START BUTTON MAIN PAGE WITH RULES OF GAME -->
-    <div id ="card-container" class="show">
+    <div id="card-container" class="show">
         <h1>CODING QUIZ CHALLENGE</h1>
-        <p>Answer as many possible questions within the time limit, 
-        incorrect answers will penalize your score time by ten seconds</p>
+        <p>Answer as many possible questions within the time limit,
+            incorrect answers will penalize your score time by ten seconds</p>
         <button id="start-quiz" class="start-quiz">START</button>
     </div>
 
     <!-- QUIZ QUESTIONS -->
     <!-- container thats the card  -->
-    <div id ="quiz-container" class="hide">
-            <h2 id="question-title">Questions Go Here NOTE</h2>
-          <div id = "answer-options" class="answer-options"></div>
-          
-            <!-- <button class="button" id="answer1"></button>
-            <button class="button" id="answer2"></button>
-            <button class="button" id="answer3"></button>
-            <button class="button" id="answer4"></button>  -->
-            
+    <div id="quiz-container" class="hide">
+        <h2 id="question-title">Questions Go Here NOTE</h2>
+        <div id="answer-options" class="answer-options"></div>
+
     </div>
 
-            <!-- YOU'RE DONT & HIGH SCORE PAGE -->
-        <div id ="score-container" class="hide">
-            <h1>YOU'RE DONE!</h1>
-                <h2>Your final score is <span id="final-score">0</span></h2>
-                <label for="initials-area">Enter initials:</label>
-                <input type="text" name="initials-area" maxlength="2" id="initials">
-                <button id="submit-button" type="submit">Submit</button>
-            </div>
+    <!-- YOU'RE DONT & HIGH SCORE PAGE -->
+    <div id="score-container" class="hide">
+        <h1>YOU'RE DONE!</h1>
+        <h2>Your final score is <span id="final-score">0</span></h2>
+        <label for="initials-area">Enter initials:</label>
+        <input type="text" name="initials-area" maxlength="2" id="initials">
+        <button id="submit-button" type="click">Submit</button>
+    </div>
 
-            <div id ="highscore-container" class="hide">
-            <div id="highscore" class="highscore">
-                <h1>HIGH SCORES</h1>
-                <button id="playagain">Play Again</button>
-                <button id="clearHS" value="reset">Clear Highscores</button>
-            </div>        
-
-
- <!-- <button class="button correct">answer 1</button>
-            <button class="button wrong">answer 1</button> -->
-
-<!-- All Done!
-Your Final score is x.
-Enter initials: [TEXT BOX]
-<button id="submit" class="submit">Submit</button>
-
-High Scores
-[TEXT BOX: 1. AB 22 POINTS] -->
-<!-- <button id="go-back" class="go-back">GO BACK</button> -->
-<!-- <button id="clear-score" class="clear-score">Clear Score</button> -->
-
-    <script src="./Assets/JavaScript/script.js"></script>
+        <script src="./Assets/JavaScript/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-

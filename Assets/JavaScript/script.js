@@ -29,9 +29,6 @@ var quizQuestions = [
     },
 ]
 
-// quizQuestions[0].title //this gets you the first question
-// quizQuestions[1].answer // this gets answer: parenthesis
-// quizQuestions[2].options[2] = /// this gets you booleans
 
 
 // DOME ELEMENTS
@@ -40,10 +37,9 @@ var highScoreEl = document.querySelector("#highscore");
 var timerEl = document.querySelector("#timer");
 
 //Containers 
-var containerEL = document.querySelector('#card-container');
+var startEL = document.querySelector('#card-container');
 var quizContainerEL = document.querySelector('#quiz-container');
-var scoreContainerEl = document.querySelector("#score-container")
-var highScoreContainerEl = document.querySelector('#highscore-container');
+// var highScoreContainerEl = document.querySelector('#highscore-container');
 
 //start button, question title, submit button
 var startQuizEl = document.querySelector("#start-quiz");
@@ -66,9 +62,9 @@ var timeInterval = 0;
 var questionIndex = 0;
 
 var index = 0;
-var score = 0; 
-
-
+var score = 0;
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores)
 //NEED TO HIDE CONTAINERS
 
 function startQuiz() {
@@ -84,13 +80,13 @@ function startQuiz() {
         }
     }, 1000);
 
-    containerEL.classList.remove('show');
-    containerEL.classList.add('hide');
+    startEL.classList.remove('show');
+    startEL.classList.add('hide');
     quizContainerEL.classList.remove('hide');
     quizContainerEL.classList.add('show');
-    
+
     askQuestions();
-}
+};
 
 function askQuestions() {
 
@@ -98,69 +94,59 @@ function askQuestions() {
 
 
     questitleEl.textContent = quizQuestions[index].title;
-    // answerOneEl.textContent = quizQuestions[index].options[0];
-    // answerTwoEl.textContent = quizQuestions[index].options[1];
-    // answerThreeEl.textContent = quizQuestions[index].options[2];
-    // answerFourEl.textContent = quizQuestions[index].options[3];
     quizQuestions[index].options.forEach(function (option) {
         var button = document.createElement('button')
         button.classList.add('button')
         button.textContent = option
         button.setAttribute('value', option)
         button.onclick = function () {
-       
+
             if (this.value === quizQuestions[index].answer) {
                 score++;
                 // console.log('correct')
             } else {
-                timeLeft = timeLeft -=10
+                timeLeft = timeLeft -= 10
                 // alert('Wrong Answer')
             }
 
             index++; //move to next question
             if (index === quizQuestions.length) {
                 console.log('end game')
+                endGame();
 
             } else {
                 askQuestions();
-                endGame();
-
 
             }
-            //score ++ or whatever the score variable was 
-    //timer decromentation whatever the timer variable is -=10
-    //end game do another function 
 
-        }
+        };
         document.getElementById('answer-options').appendChild(button)
-    })
+    });
 
-}
+};
 
-function endGame (event) {
+function endGame(event) {
+    var scoreContainerEl = document.querySelector('#score-container');
     quizContainerEL.classList.add('hide');
+    quizContainerEL.classList.remove('show');
     scoreContainerEl.classList.add('show');
-    // highScoreContainerEl.classList.add('show');
-    // scoreContainerEl.classList.remove('hide');
-    // scoreContainerEl.classList.add('show');
-    
-    // quizContainerEL.classList.add('hide');
 
+    clearInterval(timeInterval);
 
+    document.getElementById('submit-button').addEventListener("click", function (event) {
+        event.preventDefault();
+        var initials = document.getElementById('initials').value;
+        var scoreObj = {
+            initials: initials,
+            score: score * timeLeft
+        }
+        highScores.push(scoreObj);
+        localStorage.setItem('highScores', JSON.stringify(highScores));
+        window.location.href = "highscore.html";
+    });
 
-}
+};
 
-
-//add to score if correct 
-// reduce timer if wrong
-// when quiz over show score container & hide quiz container 
-
-// function checkAnswer(event) { //event is going to trigger when you click on the answer
-//     //index++;
-//     //call startQuiz()
-
-//     startQuiz();
-// }
 
 startQuizEl.addEventListener('click', startQuiz)
 

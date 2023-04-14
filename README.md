@@ -10,6 +10,10 @@ Module 4 Challenge
   
   ## Description:
   The purpose of this challenge is to a timed coding quiz with multiple-choice questions. The user will be given five multiple-choice questions and at the end will of the quiz they can submit their highest score. 
+  
+  Application deployed link: <br>
+    https://christian1512-fe.github.io/DevCM-JSQ-2022/index.html
+
 
   ## Usage
   This application is very simple to user. Once the user presses the start button the timer will start counting down, for each question the user gets an incorrect answer the timer will be penelized the user ten seconds out of their timer. Once the user is done with the quiz it they will be able to submit their highest score. Give it a try and see if you can submit the highest score!!! 
@@ -18,8 +22,6 @@ Module 4 Challenge
   ![alt text](./Assets/Images/questions.png)<br>
   ![alt text](./Assets/Images/initialshs.png)<br>
   ![alt text](./Assets/Images/highscore.png)<br>
-
-
 
   ## License
 The MIT License (MIT)

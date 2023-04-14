@@ -3,20 +3,19 @@
  box-sizing: border-box; 
  margin: 0;
  padding: 0;
- color:black; 
+ /* color:rgb(231, 0, 0);  */
  font-family: 'Bebas Neue', sans-serif;
- font-size: 30px; 
+ font-size: 30px;
 
 
 }
 
-body {
-    /* background-image: url(./Images/2842263.jpg); */
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    background-size:cover;
+/* body {
+    background-image: url(./Images/2842263.jpg);
+  
+
  
-}
+} */
 
 .hide {
     display: none;
@@ -56,11 +55,16 @@ a:link  {
  margin: auto;
  overflow: hidden; 
  border-radius: 67px;
- background-color: rgb(255, 251, 251);
+ /* background-color: rgb(255, 251, 251); */
  box-shadow: 0 0 10px 2px;
+ text-align: center;
+
  /* border: 10px solid purple ; */
- /* background-image: url(./Images/PhotoRoom_20221113_155357.jpg); */
+ /* background-image: url(../Images/IMG_9485.jpg); */
  /* background-repeat: no-repeat; */
+ /* background-repeat: no-repeat; */
+/* background-attachment: fixed;
+background-position: center; */
 
 } 
 

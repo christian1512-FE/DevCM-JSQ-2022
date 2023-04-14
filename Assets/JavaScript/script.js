@@ -66,7 +66,7 @@ var timeInterval = 0;
 var questionIndex = 0;
 
 var index = 0;
-
+var score = 0; 
 
 
 //NEED TO HIDE CONTAINERS
@@ -88,7 +88,7 @@ function startQuiz() {
     containerEL.classList.add('hide');
     quizContainerEL.classList.remove('hide');
     quizContainerEL.classList.add('show');
-
+    
     askQuestions();
 }
 
@@ -108,20 +108,28 @@ function askQuestions() {
         button.textContent = option
         button.setAttribute('value', option)
         button.onclick = function () {
+       
             if (this.value === quizQuestions[index].answer) {
-                console.log('correct')
+                score++;
+                // console.log('correct')
             } else {
-                console.log('wrong')
+                timeLeft = timeLeft -=10
+                // alert('Wrong Answer')
             }
 
-            index++;
+            index++; //move to next question
             if (index === quizQuestions.length) {
                 console.log('end game')
+
             } else {
                 askQuestions();
+                endGame();
+
 
             }
-    
+            //score ++ or whatever the score variable was 
+    //timer decromentation whatever the timer variable is -=10
+    //end game do another function 
 
         }
         document.getElementById('answer-options').appendChild(button)
@@ -129,16 +137,30 @@ function askQuestions() {
 
 }
 
+function endGame (event) {
+    quizContainerEL.classList.add('hide');
+    scoreContainerEl.classList.add('show');
+    // highScoreContainerEl.classList.add('show');
+    // scoreContainerEl.classList.remove('hide');
+    // scoreContainerEl.classList.add('show');
+    
+    // quizContainerEL.classList.add('hide');
+
+
+
+}
+
+
 //add to score if correct 
 // reduce timer if wrong
 // when quiz over show score container & hide quiz container 
 
-function checkAnswer(event) { //event is going to trigger when you click on the answer
-    //index++;
-    //call startQuiz()
+// function checkAnswer(event) { //event is going to trigger when you click on the answer
+//     //index++;
+//     //call startQuiz()
 
-    startQuiz();
-}
+//     startQuiz();
+// }
 
 startQuizEl.addEventListener('click', startQuiz)
 
